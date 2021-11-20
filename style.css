@@ -1,0 +1,295 @@
+*{            
+    cursor: url('imagens/cursor/default.png'), pointer;        
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    max-width: 100vw;
+    box-sizing: border-box;
+}
+html{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    
+}
+.background{
+    background-image: url(imagens/escrivaninha.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: block;
+
+}
+#sombra{
+    display: grid;
+    overflow: hidden;
+}
+#input-text{
+    width: 100%;
+    height:100%;
+    resize: none;
+    outline-style: none;
+    box-sizing: border-box;
+    border-radius: inherit;
+    background-color: rgba(230, 225, 195);
+}
+#btns-container-caixa-input{
+    overflow: visible;
+}
+[btn]{
+
+    height: 30px;
+    width: 100px;
+    margin: 10px 5px;
+    float: right;
+    border-radius: 4px 10px 4px 10px;
+    border: none;
+    box-shadow: 2px 2px 5px black;
+    background-color:rgba(171, 135, 98);
+    color: white;
+}
+[btn]:hover{
+    transform: scale(1.1);
+}
+body{
+    height: max-content;
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    place-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+div{
+    overflow: hidden;
+}
+
+.ler-div{          
+    display: flex;
+    overflow-wrap: break-word;
+    justify-content: center;
+    border: none;
+    user-select: none;
+}
+
+[tela]{
+    height: clamp(150px, 45vw, 250px);
+    width: clamp(300px, 55vw, 400px);
+    box-shadow: 5px 5px 20px black;
+    margin: auto auto auto auto;
+    border-radius: 10px;
+    overflow: visible;
+}
+[tela="ativar"]{
+    animation: cor-fundo 1s forwards;
+    height: clamp(250px, 50vw, 300px);
+    width: clamp(250px, 50vw, 300px);
+    border-radius: 50%;
+}
+#caixa-lendo{
+    transform: translateY(30px);
+}
+#sombra{
+	background-color: rgba(255, 255, 255, 0);
+    height: 100vh;
+}
+[log-texto]{
+    background-color: rgba(255, 255, 255, 0.849);
+    width: clamp(300px, 70vw, 720px);
+    height: 45px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+    padding: 5px;
+    user-select: none;
+    opacity: 0;
+    transition: opacity 1s forwards;
+    text-align: justify;
+}
+
+[log-texto]{
+    font-weight: normal;
+    font-size: 13pt;
+}
+
+[log-texto]:active{         
+    position: absolute; 
+    overflow-y: scroll;
+    font-size: 11pt;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 0 10px white;
+    animation: expandir 100ms forwards;
+}
+@keyframes expandir {
+    from{transform: scale(1)}
+    to{transform: scale(1.5)}
+
+}
+p{
+    margin: auto;
+    font-size: 15pt;
+    overflow-y: hidden;
+}
+#lendo-p{
+    max-width: 100%;
+    max-height: 100%;
+    font-size: 15pt;
+    font-weight: 200;
+    overflow-wrap: break-word;
+}
+[spotlight]{
+    display: none;
+}
+[spotlight="on"]{
+    display: block;
+    width: clamp(300px, 30%, 400px);
+    animation: move-spotlight 1s forwards;
+    pointer-events: none;
+}
+#sombra > p{
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+@keyframes move-spotlight {
+    from{
+        transform: translate(10%, -200px);
+    } to{
+        transform: translate(10%, -100px);
+    }
+}
+@keyframes cor-fundo {
+    from {
+        box-shadow: 0px 0px 20px transparent;
+        background-color: transparent;
+    }
+    to {
+        box-shadow: -1px 10px 20px rgb(255, 255, 255,0.699);
+        background-color: rgba(255, 255, 255, 0.699);
+    }
+}
+@keyframes sombra {
+    from{
+        background-color: transparent;
+    }
+    to{
+        background-color: rgba(0, 0, 0, 0.781);
+    }
+}
+#opcoes-laterais{
+    position: absolute;
+    margin-right: 10px; 
+    justify-self: end;
+    margin-right: 10px;
+    margin-top: 35vh;
+    overflow: visible;
+}
+#opcoes-laterais > button{
+    width: 100%;
+    margin-top: 10px;
+    background-color:rgba(171, 135, 98);
+    box-shadow: 2px 2px 5px black;
+    border: none;
+}
+[ppm-container]{  
+    background-color:rgba(171, 135, 98);  
+    display: flex;            
+    background-color: rgba(230, 225, 195);
+    box-shadow: 2px 2px 5px black;
+}
+
+[ppm-text]{
+    user-select: none;
+    width: 70px;
+    text-align: center;
+}
+[ppm-container] > button{
+    background-color: rgba(171, 135, 98);
+    width: 30px;
+    text-align: center;
+    border: none;
+}
+#opcoes-laterais button, p{
+    font-size: 11pt;
+    font-weight: bold;
+}
+[esmaecer="on"]{
+    animation: esmaecer 1s forwards;   
+}
+@keyframes esmaecer {
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 40%;
+    }
+}
+button:active{
+    color:rgba(171, 135, 98);
+    background-color: rgba(230, 225, 195);
+}
+
+@media (max-width: 664px) {
+    #opcoes-laterais{
+        margin-top: 10vh;
+        transition: margin-top 2s
+    }
+}
+@media (max-height: 570px){
+    #sombra > p{
+        transform: translateY(-50px);
+        transition: translateY() 2s;
+    }
+}
+.setas-container{
+    display: none;
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: auto;
+    right: 10px;
+    bottom: 10px;
+    overflow: visible;
+    user-select: none;
+}
+
+.setas-container > button{
+    background-color: rgba(0, 0, 0, 0.466);
+    
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    font-size: 17pt;
+    user-select: none;
+}     
+.setas-container > button:active{
+    box-shadow: 0 0 10px rgba(171, 135, 98);
+}
+
+[op-el="lendo"]{
+    transition: opacity 200ms ease-out;
+    opacity: 40%;
+}
+[op-el="lendo"]:hover{
+    transition: opacity 200ms ease-out;
+    opacity: 100%;
+}
+
+[btn-voltar]{
+    display: none;
+}
+
+.rodape{
+    background-color: rgba(0, 0, 0, 0.801);
+    position: fixed;
+    place-self: end;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+    padding: 5px;
+}

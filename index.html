@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitura Dinâmica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background">    
+            <div id="sombra">
+                <p>
+                    <img spotlight src="imagens/luminaria.png">
+                </p> 
+                <main>
+                    <div id="caixa-input" tela>
+                        <textarea id="input-text" wrap="soft" placeholder="Cole ou digite um texto aqui!"></textarea>
+                        <div id="btns-container-caixa-input">
+                            <button btn id="btn-input-text">Começar!</button>
+                            <button btn id="btn-limpar-text">Limpar</button>
+                        </div>
+                    </div>
+                    <div id="caixa-lendo" style="overflow: visible; display: none;">
+                        <p log-texto="nao-lendo"></p>    
+                        <div class="ler-div" tela>
+                            <p id="lendo-p"></p>
+                        </div>
+                    </div>
+                    
+                    
+                </main>
+                <div id="opcoes-laterais">
+                    <div ppm-container op-el>
+                        <button alterar-ppm-btn="diminuir">-</button>
+                        <p ppm-text type="text"></p>
+                        <button alterar-ppm-btn="aumentar">+</button>
+                    </div>
+                    <button id="btn-FS" op-el>Tela cheia</button>
+                    <button btn-voltar op-el onclick="voltarInicio()">Voltar</button>
+                </div>
+                
+                <div class="setas-container">
+                    <button seta="esquerda"> < </button>
+                    <button seta="direita"> > </button>
+                </div>      
+                <footer class="rodape">Feito com muito <span>&#128154 </span> por Gabriel Portela | Porto Seguro - BA</footer>
+            </div>
+    </div>    
+    <script src="script.js">
+    </script>
+    <script>
+    </script>
+</body>
+</html>
